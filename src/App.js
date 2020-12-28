@@ -7,28 +7,32 @@ import LogoIcon from './assets/images/logo.png';
 // components
 import Button from './components/Button';
 
-const App = () => {
+const aaa = '';
+
+export default function App() {
+  const [count, setCount] = useState(1);
   const [todos, setTodos] = useState(null);
 
   useEffect(() => {
-    async function fetchTodos() {
+    async function fetchTodo() {
       const { data } = await axios.get('https://jsonplaceholder.typicode.com/todos/1');
       setTodos(data);
     }
-    fetchTodos();
+
+    fetchTodo();
   }, []);
 
   return (
-    <>
-      <h1>test SCSS</h1>
-      <h3> test static file</h3>
-      <img src={LogoIcon} alt="logo" width="50px" />
-      <h3>test axios fetch data todo</h3>
+    <div>
+      <h3>test import 2222  scss</h3>
+      <h1>test scss</h1>
+      <h3>test static file</h3>
+      <img src={LogoIcon} alt="Logo" width="50px" />
+      <h3>Test axios fetch data todo</h3>
       {todos && <>{todos.title}</>}
       <br />
-
-      <Button text="test props & eslint" />
-    </>
+      <br />
+      <Button text="Increment" />
+    </div>
   );
-};
-export default App;
+}
