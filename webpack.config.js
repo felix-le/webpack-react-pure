@@ -14,8 +14,9 @@ module.exports = {
         exclude: /node_modules/,
         use: ['babel-loader', 'eslint-loader']
       },
-      {test: /\.(scss|css)$/,
-        use:['style-loader', 'sass-loader','css-loader'],
+      {
+        test: /\.(scss|css)$/,
+        use: ['style-loader', 'css-loader', 'sass-loader'],
       },
       {
         test:  /\.(jpg|png)$/,

@@ -5,6 +5,6 @@ import App from './App';
 
 // styles
 
-import './scss/styles.scss';
+import './styles.scss';
 
 ReactDOM.render(<App />, document.getElementById('root'));
